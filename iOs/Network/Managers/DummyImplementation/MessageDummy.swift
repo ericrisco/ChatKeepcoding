@@ -11,7 +11,13 @@ import MessageKit
 
 public class MessageDummy: MessageManager {
     
-    public func list(discussionId: String, onSuccess: @escaping ([Message]) -> Void, onError: ErrorClosure?) {
+    public var discussion: Discussion
+    
+    public required init(discussion: Discussion) {
+        self.discussion = discussion
+    }
+    
+    public func list(onSuccess: @escaping ([Message]) -> Void, onError: ErrorClosure?) {
         
         let john = Sender.init(id: "0", displayName: "John McClane")
         let hans = Sender.init(id: "1", displayName: "Hans Gruber")
@@ -42,3 +48,4 @@ public class MessageDummy: MessageManager {
     }
     
 }
+

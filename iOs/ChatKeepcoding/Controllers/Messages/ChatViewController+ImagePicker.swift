@@ -19,7 +19,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
                 let data = MessageData.photo(pickedImage)
                 let message = Message.init(sender: self.currentSender(), data: data)
                 
-                let manager = MessageInteractor.init(manager: MessageDummy()).manager
+                let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
 
                 manager.add(message: message, onSuccess: {
                     let uploadManager = UploadInteractor.init(manager: UploadDummy()).manager

@@ -10,7 +10,11 @@ import Foundation
 
 public protocol MessageManager {
     
-    func list(discussionId: String, onSuccess: @escaping ([Message]) -> Void, onError: ErrorClosure?)
+    var discussion: Discussion { get set }
+    
+    init(discussion: Discussion)
+    func list(onSuccess: @escaping ([Message]) -> Void, onError: ErrorClosure?)
     func add(message: Message, onSuccess: @escaping () -> Void, onError: ErrorClosure?)
     
 }
+

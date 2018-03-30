@@ -13,9 +13,9 @@ extension ChatViewController: MessagesDataSource {
     
     func fetchMessages() {
         
-        let manager = MessageInteractor.init(manager: MessageDummy()).manager
+        let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
         
-        manager.list(discussionId: self.actualDiscussion.uid, onSuccess: { (messages) in
+        manager.list(onSuccess: { (messages) in
             self.messages = messages
             self.messagesCollectionView.reloadData()
             self.messagesCollectionView.scrollToBottom()
