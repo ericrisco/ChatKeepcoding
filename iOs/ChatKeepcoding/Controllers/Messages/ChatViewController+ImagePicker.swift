@@ -15,16 +15,18 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         dismiss(animated: true, completion: {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
- 
-                let data = MessageData.photo(pickedImage)
-                let message = Message.init(sender: self.currentSender(), data: data)
                 
-                let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
-
-                manager.add(message: message, onSuccess: {
-                    let uploadManager = UploadInteractor.init(manager: UploadDummy()).manager
+                let data = MessageData.photo(pickedImage)
+                let message = Message.init(sender: self.currentSender(),
+                                           data: data,
+                                           type: MessageTypeEnum.image.rawValue,
+                                           value: "\(UUID().uuidString).jpg")
+                
+                let uploadManager = UploadInteractor.init(manager: UploadDummy()).manager
+                uploadManager.save(image: pickedImage, onSuccess: {
                     
-                    uploadManager.save(image: pickedImage, onSuccess: {
+                    let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
+                    manager.add(message: message, onSuccess: {
                         self.messages.append(message)
                         self.messagesCollectionView.insertSections([self.messages.count - 1])
                     }, onError: { (error) in
@@ -34,6 +36,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
                 }, onError: { (error) in
                     print(error)
                 })
+            
                 
             }
         })

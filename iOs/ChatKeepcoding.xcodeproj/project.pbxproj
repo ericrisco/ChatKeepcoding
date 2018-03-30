@@ -38,6 +38,7 @@
 		33845B34206C556B00800A99 /* UploadDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845B33206C556B00800A99 /* UploadDummy.swift */; };
 		33845B45206D3D1B00800A99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845B44206D3D1B00800A99 /* Date.swift */; };
 		33845B68206DA84D00800A99 /* DiscussionsViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845B67206DA84D00800A99 /* DiscussionsViewController+Table.swift */; };
+		338BCB2C206EEC5B004303F7 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB2B206EEC5B004303F7 /* MessageType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		33845B33206C556B00800A99 /* UploadDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDummy.swift; sourceTree = "<group>"; };
 		33845B44206D3D1B00800A99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		33845B67206DA84D00800A99 /* DiscussionsViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscussionsViewController+Table.swift"; sourceTree = "<group>"; };
+		338BCB2B206EEC5B004303F7 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		81E704CAF74B4FC475EBCC74 /* Pods-ChatKeepcoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKeepcoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKeepcoding/Pods-ChatKeepcoding.release.xcconfig"; sourceTree = "<group>"; };
 		884B5BE89B135947476C4C4E /* Pods_FirebaseKeepcoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseKeepcoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5596D4E729AC87B8C24B6C0 /* Pods-ChatKeepcoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKeepcoding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKeepcoding/Pods-ChatKeepcoding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				33845AC62063079300800A99 /* Discussion.swift */,
 				33845B0A206B126A00800A99 /* Message.swift */,
 				33845B27206C187100800A99 /* User.swift */,
+				338BCB2B206EEC5B004303F7 /* MessageType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				33845B18206B2A6C00800A99 /* ChatViewController+ImagePicker.swift in Sources */,
 				33845B2D206C1BDB00800A99 /* LoginViewController.swift in Sources */,
 				33845B24206C178A00800A99 /* UserInteractor.swift in Sources */,
+				338BCB2C206EEC5B004303F7 /* MessageType.swift in Sources */,
 				33845B14206B190000800A99 /* ChatViewController+Layout.swift in Sources */,
 				33845AD220630A9A00800A99 /* DiscussionDummy.swift in Sources */,
 				33845B68206DA84D00800A99 /* DiscussionsViewController+Table.swift in Sources */,

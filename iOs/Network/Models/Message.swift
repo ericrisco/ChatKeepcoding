@@ -15,16 +15,21 @@ public class Message: MessageType {
     public var messageId: String
     public var sentDate: Date
     public var data: MessageData
+    public var type: String
+    public var value: String
     
-    init(sender: Sender, messageId: String, sentDate: Date, data: MessageData){
+    public init(sender: Sender, messageId: String, sentDate: Date, data: MessageData, type: String, value: String){
         self.sender = sender
         self.messageId = messageId
         self.sentDate = sentDate
         self.data = data
+        self.type = type
+        self.value = value
     }
     
-    convenience init(sender: Sender, data: MessageData){
-        self.init(sender: sender, messageId: UUID().uuidString, sentDate: Date(), data: data)
+    convenience init(sender: Sender, data: MessageData, type: String, value: String){
+        self.init(sender: sender, messageId: UUID().uuidString, sentDate: Date(), data: data, type: type, value: value)
     }
     
 }
+

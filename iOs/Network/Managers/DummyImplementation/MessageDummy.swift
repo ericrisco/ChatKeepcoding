@@ -22,14 +22,17 @@ public class MessageDummy: MessageManager {
         let john = Sender.init(id: "0", displayName: "John McClane")
         let hans = Sender.init(id: "1", displayName: "Hans Gruber")
         
-        let d1 = MessageData.text("Yippie-Ki-Yay, Motherfucker!")
-        let m1 = Message.init(sender: john, data: d1)
+        let value1 = "Yippie-Ki-Yay, Motherfucker!"
+        let d1 = MessageData.text(value1)
+        let m1 = Message.init(sender: john, data: d1, type: MessageTypeEnum.text.rawValue, value: value1)
         
-        let d2 = MessageData.text("Now I have a machine gun.")
-        let m2 = Message.init(sender: hans, data: d2)
+        let value2 = "Now I have a machine gun! HO! HO! HO!"
+        let d2 = MessageData.text(value2)
+        let m2 = Message.init(sender: hans, data: d2, type: MessageTypeEnum.text.rawValue, value: value2)
         
-        let d3 = MessageData.photo(UIImage(named: "diehard")!)
-        let m3 = Message.init(sender: john, data: d3)
+        let value3 = "diehard.jpg"
+        let d3 = MessageData.photo(UIImage(named: "diehard.jpg")!)
+        let m3 = Message.init(sender: john, data: d3, type: MessageTypeEnum.image.rawValue, value: value3)
         
         var messages: [Message] = [Message]()
         

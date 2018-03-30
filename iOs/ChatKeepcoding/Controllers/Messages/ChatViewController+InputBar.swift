@@ -16,7 +16,7 @@ extension ChatViewController: MessageInputBarDelegate {
         for component in inputBar.inputTextView.components {
             if let text = component as? String {
                 let data = MessageData.text(text)
-                let message = Message.init(sender: currentSender(), data: data)
+                let message = Message.init(sender: currentSender(), data: data, type: MessageTypeEnum.text.rawValue, value: text)
                 
                 let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
                 
