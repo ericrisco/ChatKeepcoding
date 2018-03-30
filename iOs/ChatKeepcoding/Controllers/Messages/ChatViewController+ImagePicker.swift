@@ -16,14 +16,15 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         dismiss(animated: true, completion: {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 
+                let name = "\(UUID().uuidString).jpg"
                 let data = MessageData.photo(pickedImage)
                 let message = Message.init(sender: self.currentSender(),
                                            data: data,
                                            type: MessageTypeEnum.image.rawValue,
-                                           value: "\(UUID().uuidString).jpg")
+                                           value: name)
                 
                 let uploadManager = UploadInteractor.init(manager: UploadDummy()).manager
-                uploadManager.save(image: pickedImage, onSuccess: {
+                uploadManager.save(name: name, image: pickedImage, onSuccess: {
                     
                     let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
                     manager.add(message: message, onSuccess: {

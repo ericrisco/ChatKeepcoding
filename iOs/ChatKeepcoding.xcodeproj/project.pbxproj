@@ -105,8 +105,8 @@
 		33845A9A206304B300800A99 = {
 			isa = PBXGroup;
 			children = (
-				33845B43206D3D0E00800A99 /* Extensions */,
 				33845AA5206304B400800A99 /* ChatKeepcoding */,
+				33845B43206D3D0E00800A99 /* Extensions */,
 				410227CD1D394EF1D79A9768 /* Frameworks */,
 				33845AB82063050000800A99 /* Network */,
 				19BE9268DE009D75F418689A /* Pods */,
@@ -215,8 +215,8 @@
 			children = (
 				33845AC62063079300800A99 /* Discussion.swift */,
 				33845B0A206B126A00800A99 /* Message.swift */,
-				33845B27206C187100800A99 /* User.swift */,
 				338BCB2B206EEC5B004303F7 /* MessageType.swift */,
+				33845B27206C187100800A99 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 			children = (
 				33845ACB2063099600800A99 /* DiscussionInteractor.swift */,
 				33845B21206C149300800A99 /* MessageInteractor.swift */,
-				33845B23206C178A00800A99 /* UserInteractor.swift */,
 				33845B2E206C54ED00800A99 /* UploadInteractor.swift */,
+				33845B23206C178A00800A99 /* UserInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -238,8 +238,8 @@
 				33845B20206C13DA00800A99 /* DummyImplementation */,
 				33845ACD206309D900800A99 /* DiscussionManager.swift */,
 				33845B0E206B13E500800A99 /* MessageManager.swift */,
-				33845B25206C17DB00800A99 /* UserManager.swift */,
 				33845B30206C551200800A99 /* UploadManager.swift */,
+				33845B25206C17DB00800A99 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -249,8 +249,8 @@
 			children = (
 				33845AD120630A9A00800A99 /* DiscussionDummy.swift */,
 				33845B11206B142A00800A99 /* MessageDummy.swift */,
-				33845B29206C19EB00800A99 /* UserDummy.swift */,
 				33845B33206C556B00800A99 /* UploadDummy.swift */,
+				33845B29206C19EB00800A99 /* UserDummy.swift */,
 			);
 			path = DummyImplementation;
 			sourceTree = "<group>";

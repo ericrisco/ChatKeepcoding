@@ -11,6 +11,6 @@ import UIKit
 
 public protocol UploadManager {
     
-    func save(image: UIImage, onSuccess: @escaping () -> Void, onError: ErrorClosure?)
+    func save(name: String, image: UIImage, onSuccess: @escaping () -> Void, onError: ErrorClosure?)
     
 }

@@ -11,7 +11,7 @@ import UIKit
 
 public class UploadDummy: UploadManager {
     
-    public func save(image: UIImage, onSuccess: @escaping () -> Void, onError: ErrorClosure?) {
+    public func save(name: String, image: UIImage, onSuccess: @escaping () -> Void, onError: ErrorClosure?) {
         
         onSuccess()
         
