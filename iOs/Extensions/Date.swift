@@ -19,4 +19,12 @@ extension Date {
         return Date()
     }
     
+    static func fromDateToString(date: Date, format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let retString = dateFormatter.string(from: date)
+        return retString
+    }
+    
 }
+
