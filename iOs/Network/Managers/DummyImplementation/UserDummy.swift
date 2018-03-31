@@ -33,10 +33,10 @@ public class UserDummy: UserManager {
         
     }
     
-    public func isLogged(onSuccess: @escaping (User) -> Void, onError: ErrorClosure?) {
+    public func isLogged(onSuccess: @escaping (User?) -> Void, onError: ErrorClosure?) {
         
         let user = User.init(id: "0", email: "aaa@aaa.com", password: nil)
-        onSuccess(user)
+        onSuccess(nil)
         
     }
     

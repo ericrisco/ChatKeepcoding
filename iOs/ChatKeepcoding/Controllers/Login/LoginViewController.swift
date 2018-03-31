@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         
         let manager = UserInteractor.init(manager: UserDummy()).manager
         manager.login(user: user, onSuccess: { (user) in
-            if user != nil {
+            if user. != nil {
                 self.navigateToDiscussions(user: user)
             }
         }) { (error) in

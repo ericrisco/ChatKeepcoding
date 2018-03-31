@@ -13,7 +13,7 @@ public protocol UserManager {
     func register(user: User, onSuccess: @escaping (User) -> Void, onError: ErrorClosure?)
     func login(user: User, onSuccess: @escaping (User) -> Void, onError: ErrorClosure?)
     func recoverPassword(user: User, onSuccess: @escaping (User) -> Void, onError: ErrorClosure?)
-    func isLogged(onSuccess: @escaping (User) -> Void, onError: ErrorClosure?)
+    func isLogged(onSuccess: @escaping (User?) -> Void, onError: ErrorClosure?)
     func logout(onSuccess: @escaping () -> Void, onError: ErrorClosure?)
     
 }
