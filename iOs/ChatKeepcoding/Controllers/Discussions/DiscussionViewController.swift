@@ -26,16 +26,6 @@ class DiscussionViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = logoutButton
     }
     
-    @objc func logout(sender: UIBarButtonItem) {
-        let manager = UserInteractor.init(manager: UserDummy()).manager
-        manager.logout(onSuccess: {
-            self.navigationController?.popViewController(animated: true)
-        }) { (error) in
-            print(error)            
-            self.navigationController?.popViewController(animated: true)
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.initFetch()
@@ -43,6 +33,17 @@ class DiscussionViewController: UIViewController {
     
     
     // MARK: - Navigation
+    
+    @objc func logout(sender: UIBarButtonItem) {
+        let manager = UserInteractor.init(manager: UserDummy()).manager
+        manager.logout(onSuccess: {
+            self.navigationController?.popViewController(animated: true)
+        }) { (error) in
+            print(error)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
