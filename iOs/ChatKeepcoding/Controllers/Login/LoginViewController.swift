@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        let user = User.init(id: "", displayName: "", email: email, password: password)
+        let user = User.init(id: "", email: email, password: password)
         
         let manager = UserInteractor.init(manager: UserDummy()).manager
         
@@ -81,7 +81,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        let user = User.init(id: "", displayName: "", email: email, password: password)
+        let user = User.init(id: "", email: email, password: password)
         
         let manager = UserInteractor.init(manager: UserDummy()).manager
         
