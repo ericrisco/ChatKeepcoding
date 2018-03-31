@@ -30,7 +30,7 @@
         <!--Login View Controller-->
         <scene sceneID="UOP-jo-CeE">
             <objects>
-                <viewController id="OyB-bM-1m5" customClass="LoginViewController" customModule="FirebaseKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OyB-bM-1m5" customClass="LoginViewController" customModule="ChatKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7MU-is-Ir7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,20 +63,29 @@
                                 <rect key="frame" x="30" y="577" width="315" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="loginSegue" id="KmU-fQ-eyE"/>
+                                    <action selector="loginClicked:" destination="OyB-bM-1m5" eventType="touchUpInside" id="7xW-Va-S1e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-zJ-ESF">
                                 <rect key="frame" x="30" y="622" width="315" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="registerSegue" id="aEQ-ij-07E"/>
+                                    <action selector="registerClicked:" destination="OyB-bM-1m5" eventType="touchUpInside" id="0Fw-bu-upy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-sg-0lm">
+                                <rect key="frame" x="30" y="276" width="315" height="30"/>
+                                <state key="normal" title="Recover Password"/>
+                                <connections>
+                                    <action selector="recoverClicked:" destination="OyB-bM-1m5" eventType="touchUpInside" id="d7r-08-aIb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Le-zJ-ESF" firstAttribute="width" secondItem="nuG-BM-g3G" secondAttribute="width" id="0bX-ni-42s"/>
+                            <constraint firstItem="ZiF-sg-0lm" firstAttribute="leading" secondItem="sRU-pc-XCD" secondAttribute="leading" constant="30" id="2Is-BR-xnh"/>
+                            <constraint firstItem="hii-MP-Btt" firstAttribute="top" secondItem="ZiF-sg-0lm" secondAttribute="bottom" constant="133" id="50n-dy-zYy"/>
                             <constraint firstItem="w3a-3f-xRj" firstAttribute="top" secondItem="bbw-Po-MfH" secondAttribute="bottom" constant="8" id="58O-nu-hqk"/>
                             <constraint firstItem="1Le-zJ-ESF" firstAttribute="leading" secondItem="sRU-pc-XCD" secondAttribute="leading" constant="30" id="6rg-ly-ATh"/>
                             <constraint firstItem="hii-MP-Btt" firstAttribute="width" secondItem="rug-VV-TLn" secondAttribute="width" id="7yo-Ru-NaM"/>
@@ -92,6 +101,7 @@
                             <constraint firstItem="bbw-Po-MfH" firstAttribute="width" secondItem="w3a-3f-xRj" secondAttribute="width" id="dTa-XT-EGf"/>
                             <constraint firstItem="sRU-pc-XCD" firstAttribute="trailing" secondItem="nuG-BM-g3G" secondAttribute="trailing" constant="30" id="fi0-TG-PIw"/>
                             <constraint firstItem="nuG-BM-g3G" firstAttribute="leading" secondItem="sRU-pc-XCD" secondAttribute="leading" constant="30" id="i37-xy-OkC"/>
+                            <constraint firstItem="sRU-pc-XCD" firstAttribute="trailing" secondItem="ZiF-sg-0lm" secondAttribute="trailing" constant="30" id="lEA-1V-Fb0"/>
                             <constraint firstItem="bbw-Po-MfH" firstAttribute="top" secondItem="rug-VV-TLn" secondAttribute="bottom" constant="17" id="rzv-KD-fTk"/>
                             <constraint firstItem="rug-VV-TLn" firstAttribute="leading" secondItem="sRU-pc-XCD" secondAttribute="leading" constant="30" id="uwh-Co-tjG"/>
                             <constraint firstItem="sRU-pc-XCD" firstAttribute="bottom" secondItem="1Le-zJ-ESF" secondAttribute="bottom" constant="15" id="ycr-ia-wBG"/>
@@ -111,16 +121,16 @@
         <!--Discussion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DiscussionViewController" customModule="FirebaseKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscussionViewController" id="BYZ-38-t0r" customClass="DiscussionViewController" customModule="ChatKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KVx-Ii-82u">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discussionCell" rowHeight="74" id="leU-E5-1JO" customClass="DiscussionCell" customModule="FirebaseKeepcoding" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discussionCell" rowHeight="74" id="leU-E5-1JO" customClass="DiscussionCell" customModule="ChatKeepcoding" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="leU-E5-1JO" id="3vi-KP-lPe">
@@ -191,7 +201,7 @@
         <!--Chat View Controller-->
         <scene sceneID="1J5-hr-PTe">
             <objects>
-                <viewController id="apq-Om-4AD" customClass="ChatViewController" customModule="FirebaseKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="apq-Om-4AD" customClass="ChatViewController" customModule="ChatKeepcoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KI0-Q4-E0c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +214,4 @@
             <point key="canvasLocation" x="1233" y="32"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aEQ-ij-07E"/>
-    </inferredMetricsTieBreakers>
 </document>

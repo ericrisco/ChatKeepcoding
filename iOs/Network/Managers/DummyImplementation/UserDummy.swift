@@ -11,6 +11,7 @@ import MessageKit
 
 public class UserDummy: UserManager {
     
+    
     public func register(user: User, onSuccess: @escaping (User) -> Void, onError: ErrorClosure?) {
         
         user.sender = Sender.init(id: "0", displayName: "John McClane")
@@ -22,6 +23,27 @@ public class UserDummy: UserManager {
         
         user.sender = Sender.init(id: "0", displayName: "John McClane")
         onSuccess(user)
+        
+    }
+    
+    public func recoverPassword(user: User, onSuccess: @escaping (User) -> Void, onError: ErrorClosure?) {
+        
+        user.sender = Sender.init(id: "0", displayName: "John McClane")
+        onSuccess(user)
+        
+    }
+    
+    public func isLogged(onSuccess: @escaping (User) -> Void, onError: ErrorClosure?) {
+        
+        let user = User.init(id: "0", email: "aaa@aaa.com", password: nil)
+        onSuccess(user)
+        
+    }
+    
+    public func logout(onSuccess: @escaping () -> Void, onError: ErrorClosure?) {
+        
+        let user = User.init(id: "0", email: "aaa@aaa.com", password: nil)
+        onSuccess()
         
     }
     

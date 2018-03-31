@@ -17,11 +17,23 @@ class DiscussionViewController: UIViewController {
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
+        super.viewDidLoad()
         guard let _ = user else {
             return
         }
-        
-        super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        let logoutButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.done, target: self, action: #selector(DiscussionViewController.logout(sender:)))
+        self.navigationItem.leftBarButtonItem = logoutButton
+    }
+    
+    @objc func logout(sender: UIBarButtonItem) {
+        let manager = UserInteractor.init(manager: UserDummy()).manager
+        manager.logout(onSuccess: {
+            self.navigationController?.popViewController(animated: true)
+        }) { (error) in
+            print(error)            
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
