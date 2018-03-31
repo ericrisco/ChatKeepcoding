@@ -40,7 +40,9 @@ class LoginViewController: UIViewController {
         
         let manager = UserInteractor.init(manager: UserDummy()).manager
         manager.login(user: user, onSuccess: { (user) in
-            self.navigateToDiscussions(user: user)
+            if user != nil {
+                self.navigateToDiscussions(user: user)
+            }
         }) { (error) in
             self.showAlert(title: "Error", message: error.localizedDescription)
         }
