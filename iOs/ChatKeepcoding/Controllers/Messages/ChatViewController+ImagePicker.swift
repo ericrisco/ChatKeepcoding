@@ -24,7 +24,9 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
                                            value: name)
                 
                 let uploadManager = UploadInteractor.init(manager: UploadDummy()).manager
-                uploadManager.save(name: name, image: pickedImage, onSuccess: {
+                uploadManager.save(name: name, image: pickedImage, onSuccess: { url in
+                    
+                    message.value = url
                     
                     let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
                     manager.add(message: message, onSuccess: {
