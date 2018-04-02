@@ -23,8 +23,6 @@ class DiscussionCell: UITableViewCell {
         set{
             _discussion = newValue
             titleLabel.text = _discussion.title
-            lastMessageLabel.text = _discussion.lastMessageText
-            dateLabel.text = _discussion.lastMessageDate.description
         }
     }
     
