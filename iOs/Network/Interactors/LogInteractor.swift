@@ -16,4 +16,8 @@ public class LogInteractor {
         self.manager = manager
     }
     
+    public convenience init(){
+        self.init(manager: LogDummy())
+    }
+    
 }

@@ -24,6 +24,11 @@ class LoginViewController: UIViewController {
                 self.navigateToDiscussions(user: u)
             }
         }, onError: nil)
+        
+        let event = Event.init(screen: "LoginViewController", type: "action", name: "APP_DID_LOAD", parameters: nil)
+        let logManager = LogInteractor.init().manager
+        logManager.log(event: event)
+        
     }
     
     // MARK: - Navigation
@@ -90,7 +95,7 @@ class LoginViewController: UIViewController {
     func navigateToDiscussions(user: User){
         
         let event = Event.init(screen: "LoginViewController", type: "action", name: "LOGIN", parameters: ["Email": user.email as NSObject])
-        let manager = LogInteractor.init(manager: LogDummy()).manager
+        let manager = LogInteractor.init().manager
         manager.log(event: event)
         
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DiscussionViewController") as? DiscussionViewController {

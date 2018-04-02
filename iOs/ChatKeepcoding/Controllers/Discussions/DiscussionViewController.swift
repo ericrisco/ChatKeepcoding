@@ -36,7 +36,7 @@ class DiscussionViewController: UIViewController {
     @objc func logout(sender: UIBarButtonItem) {
         
         let event = Event.init(screen: "DiscussionViewController", type: "action", name: "LOGOUT", parameters: ["Email": user.email as NSObject])
-        let logManager = LogInteractor.init(manager: LogDummy()).manager
+        let logManager = LogInteractor.init().manager
         logManager.log(event: event)
         
         let manager = UserInteractor.init(manager: UserDummy()).manager
@@ -60,7 +60,7 @@ class DiscussionViewController: UIViewController {
                 vc.user = user
                 
                 let event = Event.init(screen: "DiscussionViewController", type: "navigate", name: "CHAT", parameters: ["discussion.title": discussion.title as NSObject])
-                let manager = LogInteractor.init(manager: LogDummy()).manager
+                let manager = LogInteractor.init().manager
                 manager.log(event: event)
             
             default:
