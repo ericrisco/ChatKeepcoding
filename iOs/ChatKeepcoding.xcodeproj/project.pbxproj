@@ -39,6 +39,10 @@
 		33845B45206D3D1B00800A99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845B44206D3D1B00800A99 /* Date.swift */; };
 		33845B68206DA84D00800A99 /* DiscussionsViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845B67206DA84D00800A99 /* DiscussionsViewController+Table.swift */; };
 		338BCB2C206EEC5B004303F7 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB2B206EEC5B004303F7 /* MessageType.swift */; };
+		338BCB4220725D66004303F7 /* LogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB4120725D66004303F7 /* LogInteractor.swift */; };
+		338BCB4420725D81004303F7 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB4320725D81004303F7 /* LogManager.swift */; };
+		338BCB4620725E34004303F7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB4520725E34004303F7 /* Event.swift */; };
+		338BCB482072621A004303F7 /* LogDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB472072621A004303F7 /* LogDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		33845B44206D3D1B00800A99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		33845B67206DA84D00800A99 /* DiscussionsViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscussionsViewController+Table.swift"; sourceTree = "<group>"; };
 		338BCB2B206EEC5B004303F7 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		338BCB4120725D66004303F7 /* LogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInteractor.swift; sourceTree = "<group>"; };
+		338BCB4320725D81004303F7 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		338BCB4520725E34004303F7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		338BCB472072621A004303F7 /* LogDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDummy.swift; sourceTree = "<group>"; };
 		81E704CAF74B4FC475EBCC74 /* Pods-ChatKeepcoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKeepcoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKeepcoding/Pods-ChatKeepcoding.release.xcconfig"; sourceTree = "<group>"; };
 		884B5BE89B135947476C4C4E /* Pods_FirebaseKeepcoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseKeepcoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5596D4E729AC87B8C24B6C0 /* Pods-ChatKeepcoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatKeepcoding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatKeepcoding/Pods-ChatKeepcoding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 				33845B0A206B126A00800A99 /* Message.swift */,
 				338BCB2B206EEC5B004303F7 /* MessageType.swift */,
 				33845B27206C187100800A99 /* User.swift */,
+				338BCB4520725E34004303F7 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 				33845B21206C149300800A99 /* MessageInteractor.swift */,
 				33845B2E206C54ED00800A99 /* UploadInteractor.swift */,
 				33845B23206C178A00800A99 /* UserInteractor.swift */,
+				338BCB4120725D66004303F7 /* LogInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 				33845B0E206B13E500800A99 /* MessageManager.swift */,
 				33845B30206C551200800A99 /* UploadManager.swift */,
 				33845B25206C17DB00800A99 /* UserManager.swift */,
+				338BCB4320725D81004303F7 /* LogManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -251,6 +262,7 @@
 				33845B11206B142A00800A99 /* MessageDummy.swift */,
 				33845B33206C556B00800A99 /* UploadDummy.swift */,
 				33845B29206C19EB00800A99 /* UserDummy.swift */,
+				338BCB472072621A004303F7 /* LogDummy.swift */,
 			);
 			path = DummyImplementation;
 			sourceTree = "<group>";
@@ -414,7 +426,11 @@
 				33845B14206B190000800A99 /* ChatViewController+Layout.swift in Sources */,
 				33845AD220630A9A00800A99 /* DiscussionDummy.swift in Sources */,
 				33845B68206DA84D00800A99 /* DiscussionsViewController+Table.swift in Sources */,
+				338BCB4220725D66004303F7 /* LogInteractor.swift in Sources */,
+				338BCB4420725D81004303F7 /* LogManager.swift in Sources */,
+				338BCB4620725E34004303F7 /* Event.swift in Sources */,
 				33845B2A206C19EB00800A99 /* UserDummy.swift in Sources */,
+				338BCB482072621A004303F7 /* LogDummy.swift in Sources */,
 				33845AA7206304B400800A99 /* AppDelegate.swift in Sources */,
 				33845ADF206323A800800A99 /* ChatViewController.swift in Sources */,
 				33845ACC2063099600800A99 /* DiscussionInteractor.swift in Sources */,

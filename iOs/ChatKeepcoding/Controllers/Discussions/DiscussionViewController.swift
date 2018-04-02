@@ -33,8 +33,12 @@ class DiscussionViewController: UIViewController {
     
     
     // MARK: - Navigation
-    
     @objc func logout(sender: UIBarButtonItem) {
+        
+        let event = Event.init(screen: "DiscussionViewController", type: "action", name: "LOGOUT", parameters: ["Email": user.email as NSObject])
+        let logManager = LogInteractor.init(manager: LogDummy()).manager
+        logManager.log(event: event)
+        
         let manager = UserInteractor.init(manager: UserDummy()).manager
         manager.logout(onSuccess: {
             self.navigationController?.popViewController(animated: true)
@@ -54,6 +58,10 @@ class DiscussionViewController: UIViewController {
                 let vc = segue.destination as! ChatViewController
                 vc.actualDiscussion = discussion
                 vc.user = user
+                
+                let event = Event.init(screen: "DiscussionViewController", type: "navigate", name: "CHAT", parameters: ["discussion.title": discussion.title as NSObject])
+                let manager = LogInteractor.init(manager: LogDummy()).manager
+                manager.log(event: event)
             
             default:
                 break

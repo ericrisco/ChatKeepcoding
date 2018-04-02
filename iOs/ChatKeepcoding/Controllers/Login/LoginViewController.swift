@@ -88,6 +88,11 @@ class LoginViewController: UIViewController {
     }
     
     func navigateToDiscussions(user: User){
+        
+        let event = Event.init(screen: "LoginViewController", type: "action", name: "LOGIN", parameters: ["Email": user.email as NSObject])
+        let manager = LogInteractor.init(manager: LogDummy()).manager
+        manager.log(event: event)
+        
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DiscussionViewController") as? DiscussionViewController {
             if let navigator = navigationController {
                 viewController.user = user
