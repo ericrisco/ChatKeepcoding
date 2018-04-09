@@ -16,7 +16,7 @@ extension DiscussionViewController: UITableViewDelegate, UITableViewDataSource {
         self.discussionsTable.delegate = self
         self.discussionsTable.dataSource = self
         
-        let manager = DiscussionInteractor.init(manager: DiscussionDummy()).manager
+        let manager = DiscussionInteractor.init(manager: DiscussionFirebase()).manager
         manager.list(onSuccess: { (discussions) in
             self.discussions = discussions
             self.discussionsTable.reloadData()
@@ -27,7 +27,7 @@ extension DiscussionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.discussions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

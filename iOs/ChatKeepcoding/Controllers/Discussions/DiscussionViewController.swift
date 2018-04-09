@@ -39,7 +39,7 @@ class DiscussionViewController: UIViewController {
         let logManager = LogInteractor.init().manager
         logManager.log(event: event)
         
-        let manager = UserInteractor.init(manager: UserDummy()).manager
+        let manager = UserInteractor.init(manager: UserFirebase()).manager
         manager.logout(onSuccess: {
             self.navigationController?.popViewController(animated: true)
         }) { (error) in

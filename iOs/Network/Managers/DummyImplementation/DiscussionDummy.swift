@@ -9,24 +9,19 @@
 import Foundation
 
 public class DiscussionDummy: DiscussionManager {
-    
+
     public func list(onSuccess: @escaping ([Discussion]) -> Void, onError: ErrorClosure?) {
         
-        let d1 = Discussion.init(uid: "0",
-                                 title: "Firebase")
+        let d1 = Discussion.init(uid: "1", title: "Die Hard 1")
+        let d2 = Discussion.init(uid: "2", title: "Die Hard 2")
         
-        let d2 = Discussion.init(uid: "1",
-                                 title: "Clean Architecture")
-        
-        var discussions: [Discussion] = [Discussion]()
+        var discussions = [Discussion]()
         
         discussions.append(d1)
         discussions.append(d2)
         
-        discussions.sort { (d1, d2) -> Bool in return d1.title < d2.title }
-        
         onSuccess(discussions)
         
     }
-    
+
 }

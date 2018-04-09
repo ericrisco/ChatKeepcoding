@@ -6,6 +6,10 @@ target 'ChatKeepcoding' do
   use_frameworks!
 
 # Pods for ChatKeepcoding
-  pod 'MessageKit'
+  pod 'MessageKit', '~> 0.13.1'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'FirebaseUI/Database'
 
 end
