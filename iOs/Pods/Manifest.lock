@@ -25,6 +25,10 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - FirebaseStorage (2.1.3):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseUI/Database (4.5.5):
     - Firebase/Database (~> 4.0)
   - GoogleToolboxForMac/DebugUtils (2.1.3):
@@ -38,6 +42,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.14)
+  - Kingfisher (4.6.4)
   - leveldb-library (1.20)
   - MessageKit (0.13.1)
   - nanopb (0.3.8):
@@ -50,7 +55,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - FirebaseStorage
   - FirebaseUI/Database
+  - Kingfisher (~> 4.0)
   - MessageKit (~> 0.13.1)
 
 SPEC CHECKSUMS:
@@ -60,13 +67,15 @@ SPEC CHECKSUMS:
   FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
   FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MessageKit: fc74d71d9b05385138d47b3a4b7beef5c687daf1
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 80f1132adfa6c1218b34ecf5740028f85fef462a
+PODFILE CHECKSUM: b4d3f4f2848c469b7e584b1ba86bbe11e5fa0ead
 
 COCOAPODS: 1.2.0

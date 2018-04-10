@@ -36,9 +36,10 @@ extension Message {
         case MessageTypeEnum.text.rawValue:
             messageData = MessageData.text(value)
             break
-        /*case "image":
-            //El futuro eric
-            break*/
+        case "image":
+            let placeholder = UIImage.init(named: "placeholder")
+            messageData = MessageData.photo(placeholder!)
+            break
         default:
             messageData = MessageData.text(value)
         }
