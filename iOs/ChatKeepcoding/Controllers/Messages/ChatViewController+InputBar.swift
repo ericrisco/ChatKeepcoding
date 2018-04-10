@@ -15,14 +15,16 @@ extension ChatViewController: MessageInputBarDelegate {
         
         for component in inputBar.inputTextView.components {
             if let text = component as? String {
+                
                 let data = MessageData.text(text)
                 let message = Message.init(sender: currentSender(), data: data, type: MessageTypeEnum.text.rawValue, value: text)
                 
-                let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
+                let manager = MessageInteractor.init(manager: MessageFirebase.init(discussion: self.actualDiscussion)).manager
                 
                 manager.add(message: message, onSuccess: {
-                    self.messages.append(message)
-                    self.messagesCollectionView.insertSections([self.messages.count - 1])
+                    //self.messages.append(message)
+                    //self.messagesCollectionView.insertSections([self.messages.count - 1])
+                    self.messagesCollectionView.reloadData()
                 }, onError: { (error) in
                     print(error)
                 })

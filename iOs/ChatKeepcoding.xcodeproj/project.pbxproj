@@ -12,6 +12,8 @@
 		3337D721207C0BF800752353 /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337D720207C0BF800752353 /* UserFirebase.swift */; };
 		3337D723207C1BE800752353 /* DiscussionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337D722207C1BE800752353 /* DiscussionFirebase.swift */; };
 		3337D726207C202400752353 /* Discussion+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337D725207C202400752353 /* Discussion+Firebase.swift */; };
+		3337D728207D427300752353 /* MessageFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337D727207D427300752353 /* MessageFirebase.swift */; };
+		3337D72A207D445000752353 /* Message+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337D729207D445000752353 /* Message+Firebase.swift */; };
 		33845AA7206304B400800A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845AA6206304B400800A99 /* AppDelegate.swift */; };
 		33845AA9206304B400800A99 /* DiscussionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845AA8206304B400800A99 /* DiscussionViewController.swift */; };
 		33845AAC206304B400800A99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33845AAA206304B400800A99 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		3337D720207C0BF800752353 /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		3337D722207C1BE800752353 /* DiscussionFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionFirebase.swift; sourceTree = "<group>"; };
 		3337D725207C202400752353 /* Discussion+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discussion+Firebase.swift"; sourceTree = "<group>"; };
+		3337D727207D427300752353 /* MessageFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFirebase.swift; sourceTree = "<group>"; };
+		3337D729207D445000752353 /* Message+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+Firebase.swift"; sourceTree = "<group>"; };
 		33845AA3206304B400800A99 /* ChatKeepcoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatKeepcoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33845AA6206304B400800A99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33845AA8206304B400800A99 /* DiscussionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				3337D720207C0BF800752353 /* UserFirebase.swift */,
 				3337D722207C1BE800752353 /* DiscussionFirebase.swift */,
+				3337D727207D427300752353 /* MessageFirebase.swift */,
 			);
 			path = FirebaseImplementation;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				3337D725207C202400752353 /* Discussion+Firebase.swift */,
+				3337D729207D445000752353 /* Message+Firebase.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			files = (
 				33845AA9206304B400800A99 /* DiscussionViewController.swift in Sources */,
 				33845B34206C556B00800A99 /* UploadDummy.swift in Sources */,
+				3337D728207D427300752353 /* MessageFirebase.swift in Sources */,
 				33845B2F206C54ED00800A99 /* UploadInteractor.swift in Sources */,
 				33845ACE206309D900800A99 /* DiscussionManager.swift in Sources */,
 				33845B18206B2A6C00800A99 /* ChatViewController+ImagePicker.swift in Sources */,
@@ -478,6 +485,7 @@
 				33845AC22063065D00800A99 /* Typealias.swift in Sources */,
 				33845B26206C17DB00800A99 /* UserManager.swift in Sources */,
 				33845B16206B191700800A99 /* ChatViewController+InputBar.swift in Sources */,
+				3337D72A207D445000752353 /* Message+Firebase.swift in Sources */,
 				33845B28206C187100800A99 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
