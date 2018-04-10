@@ -13,7 +13,6 @@ class DiscussionCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lastMessageLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     
     private var _discussion = Discussion.init()
     var discussion: Discussion {
@@ -23,6 +22,7 @@ class DiscussionCell: UITableViewCell {
         set{
             _discussion = newValue
             titleLabel.text = _discussion.title
+            lastMessageLabel.text = _discussion.lastMessage
         }
     }
     

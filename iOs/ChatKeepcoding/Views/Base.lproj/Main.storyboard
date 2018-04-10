@@ -143,9 +143,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Message ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-dx-yER">
+                                                    <rect key="frame" x="15" y="42" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="jqH-dx-yER" firstAttribute="leading" secondItem="3vi-KP-lPe" secondAttribute="leadingMargin" id="56T-E4-uZT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jqH-dx-yER" secondAttribute="trailing" id="Awd-Nl-Dh7"/>
                                                 <constraint firstItem="cOn-W6-Dpv" firstAttribute="leading" secondItem="3vi-KP-lPe" secondAttribute="leadingMargin" id="Sga-FW-Cb1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jqH-dx-yER" secondAttribute="bottom" id="ZUr-m7-3F6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cOn-W6-Dpv" secondAttribute="trailing" id="n4B-ca-aG7"/>
                                                 <constraint firstItem="cOn-W6-Dpv" firstAttribute="top" secondItem="3vi-KP-lPe" secondAttribute="topMargin" id="qoa-ln-Tkh"/>
                                                 <constraint firstItem="cOn-W6-Dpv" firstAttribute="leading" secondItem="3vi-KP-lPe" secondAttribute="leadingMargin" id="yIF-zg-7H0"/>
@@ -153,6 +162,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="lastMessageLabel" destination="jqH-dx-yER" id="qmG-jr-MjZ"/>
                                             <outlet property="titleLabel" destination="cOn-W6-Dpv" id="8K2-pw-5Fo"/>
                                             <segue destination="apq-Om-4AD" kind="show" identifier="showChat" id="SOO-nh-KFa"/>
                                         </connections>

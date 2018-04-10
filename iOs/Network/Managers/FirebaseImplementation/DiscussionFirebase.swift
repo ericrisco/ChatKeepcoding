@@ -18,9 +18,23 @@ public class DiscussionFirebase: DiscussionManager {
         
         self.ref.observe(.value, with: { (snapshot) in
             
+            /*
             let discussions = snapshot.children
                 .flatMap({ Discussion.mapper(snapshot: $0 as! DataSnapshot) })
                 .sorted(by: { $0.uid > $1.uid })
+            */
+            
+            var discussions = [Discussion]()
+            
+            for child in snapshot.children {
+                let discussion = Discussion.mapper(snapshot: child as! DataSnapshot)
+                discussions.append(discussion!)
+            }
+            
+            discussions = discussions.sorted(by: { (discussion1, discussion2) -> Bool in
+                return discussion1.uid < discussion2.uid
+            })
+            
             
             onSuccess(discussions)
             

@@ -19,8 +19,9 @@ extension Discussion {
         
         let uid = json["uid"] as? String ?? ""
         let title = json["title"] as? String ?? ""
+        let lastMessage = json["lastMessage"] as? String ?? ""
         
-        return Discussion.init(uid: uid, title: title)        
+        return Discussion.init(uid: uid, title: title, lastMessage: lastMessage)        
         
     }
     

@@ -12,8 +12,8 @@ public class DiscussionDummy: DiscussionManager {
 
     public func list(onSuccess: @escaping ([Discussion]) -> Void, onError: ErrorClosure?) {
         
-        let d1 = Discussion.init(uid: "1", title: "Die Hard 1")
-        let d2 = Discussion.init(uid: "2", title: "Die Hard 2")
+        let d1 = Discussion.init(uid: "1", title: "Die Hard 1", lastMessage: "Yippie yay!")
+        let d2 = Discussion.init(uid: "2", title: "Die Hard 2", lastMessage: "Clean architecture rocks!")
         
         var discussions = [Discussion]()
         
