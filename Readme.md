@@ -1,5 +1,7 @@
 # Firebase Chat
 
+![](https://firebase.google.com/images/usecases/new-features_1x.png)
+
 iOs Swift 4 Chat made with Clean Architecture
 
 All the backend is implemented with Firebase. You can find:
