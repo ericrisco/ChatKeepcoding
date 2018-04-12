@@ -17,8 +17,20 @@ exports.newMessage = functions.database.ref('/messages/{discussionId}/{messageId
         return;
     }
 
-    console.log(message);
+    var message_value = message.type == "image" ? "It's an image!" : message.value;
+    message_value = message.displayName + ": " + message_value;
     
-    return true;
+    const setNewMessagePromise = admin.database().ref(`/discussions/${discussionId}/lastMessage`).set(message_value)
+
+    const payload = {
+        notification: {
+            title: message.displayName,
+            body: message.value
+        }
+    } 
+
+    const sendMessagePromise = admin.messaging().sendToTopic("ALL", payload);
+    
+    return Promise.all([setNewMessagePromise, sendMessagePromise]);
 
 });

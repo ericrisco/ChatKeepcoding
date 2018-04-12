@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 class LoginViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let manager = UserInteractor.init(manager: UserDummy()).manager
+        let manager = UserInteractor.init(manager: UserFirebase()).manager
         manager.isLogged(onSuccess: { (user) in
             if let u = user {
                 self.navigateToDiscussions(user: u)

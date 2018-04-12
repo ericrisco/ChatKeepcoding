@@ -13,5 +13,8 @@ target 'ChatKeepcoding' do
   pod 'FirebaseUI/Database'
   pod 'FirebaseStorage'
   pod 'Kingfisher', '~> 4.0'
+  pod 'Firebase/Messaging'
+  pod 'Fabric', '~> 1.7.6'
+  pod 'Crashlytics', '~> 3.10.1'
 
 end
